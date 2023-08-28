@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dei-button {
+  background: linear-gradient(136deg, #fff0d3 0%, #d5953b 100%);
+}
+.ant-pagination .ant-pagination-options-quick-jumper input {
+  color: black;
+}
