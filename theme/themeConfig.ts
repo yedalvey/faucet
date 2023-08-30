@@ -12,6 +12,7 @@ const theme: ThemeConfig = {
       "colorBgContainer": "#121418",
       // "colorText": "white",
       // "colorTextHeading": "white"
+      "fontSize": 14
     },
     "Pagination": {
       "colorTextPlaceholder": "black",

@@ -1,7 +1,7 @@
 import { getDefaultConfig } from 'connectkit'
 import { createConfig } from 'wagmi'
 import { arbitrum, fantomTestnet } from "wagmi/chains";
-const chains = [arbitrum, fantomTestnet];
+const chains = [fantomTestnet, arbitrum];
 
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'

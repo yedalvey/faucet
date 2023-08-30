@@ -1,37 +1,27 @@
+'use client'
 import { FC } from "react"
 import { ConnectKitButton } from "src/components/ConnectKitButton"
 import { Table } from 'antd'
+import Image from 'next/image'
+
 interface IProps {
 
 }
 
 const Header = () =>
-    <div className="w-[1600px] h-[60px] px-5 py-2.5 justify-between items-center gap-[200px] inline-flex">
-        <div />
-        <div className="justify-end items-center gap-3 flex">
-            <div className="w-[159px] px-4 py-[11px] bg-neutral-900 rounded-lg border border-neutral-700 justify-center items-center gap-2 flex">
-                <div className="w-6 h-6 justify-center items-center gap-2.5 flex">
-                    <img className="w-6 h-6 origin-top-left rotate-180 rounded-full" src="https://via.placeholder.com/24x24" />
-                </div>
-                <div className="justify-center items-center gap-1 flex">
-                    <ConnectKitButton />
-                </div>
-            </div>
-            <div className="w-10 px-2 py-[11px] bg-neutral-900 rounded border border-neutral-700 justify-center items-center gap-2.5 flex">
-                <div className="w-6 h-6 px-[1.31px] origin-top-left rotate-180 justify-center items-center flex">
-                    <div className="w-[21.38px] h-6 relative">
-                    </div>
-                </div>
-            </div>
+    <div className="w-full h-[60px] px-5 py-2.5 justify-end items-center gap-[12px] inline-flex">
+        <ConnectKitButton />
+        <div className="w-10 h-10 px-2 py-[11px] bg-neutral-900 rounded border border-neutral-700 justify-center items-center gap-2.5 inline-flex">
+            <Image src='/Arbitrum.svg' alt="icon" width={20} height={20} />
         </div>
     </div>
 
-const Title = () => <div>
+const Title = () => <div className="w-[1400px] h-[123px] pt-6 pb-9 justify-start items-center gap-3">
     <div className="w-[1400px] text-white text-[32px] font-normal">Super Referral</div>
     <div className="w-[1400px] text-zinc-400 text-[13px] font-normal">Updated on August 01 at 8:00 (UTC+8)</div>
 </div>
 
-const Content = () => <div className="w-[332px] h-[116px] px-6 py-4 bg-neutral-900 rounded-xl flex-col justify-start items-end gap-4 inline-flex">
+const Content = () => <div className="w-[332px] h-[116px] px-6 py-4 bg-[#121418] rounded-xl flex-col justify-start items-end gap-4 inline-flex">
     <div className="self-stretch rounded-xl justify-start items-center gap-1 inline-flex">
         <div className="text-white text-sm font-normal capitalize">Total Traders Referred</div>
     </div>
@@ -64,7 +54,6 @@ const ConnectedArea: FC<IProps> = (props) => {
             title: 'Total Rebates',
             width: '40%',
             dataIndex: 'totalRebates',
-            align: 'right',
         },
         {
             title: 'Amount',
@@ -79,15 +68,34 @@ const ConnectedArea: FC<IProps> = (props) => {
         totalRebates: '12312391283',
         amount: '1231239128',
     }
+
+    const handleExport = () => {
+
+    }
+
     return <div className="mx-[100px] my-[50px]">
         <Header />
         <Title />
-        <Content />
-        <Content />
-        <Content />
-        <Content />
-        <Content />
-        <Table columns={columns} dataSource={new Array(20).fill(1).map(() => ({ ...mockData }))} pagination={{ showQuickJumper: true }}></Table>
+        <div className='flex gap-6 mb-6'>
+            <Content />
+            <Content />
+            <Content />
+            <Content />
+        </div>
+
+        <div className="w-[1400px] h-auto px-6 py-4 bg-[#121418] rounded-2xl flex-col justify-start">
+            <div className="w-[1352px] h-9 py-0.5 rounded-xl justify-between items-center inline-flex">
+                <div className="text-white text-base font-semibold capitalize">Rebates distribution history</div>
+                <div className="w-[75px] px-4 py-[11px] bg-[#121418] rounded-lg border border-neutral-700 justify-center items-center gap-2 flex">
+                    <div className="justify-center items-center gap-1 flex">
+                        <div className="text-white text-sm font-normal" onClick={() => handleExport()}>Export</div>
+                    </div>
+                </div>
+            </div>
+            <div className="mt-[7px]">
+                <Table bordered={false} columns={columns} dataSource={new Array(20).fill(1).map(() => ({ ...mockData }))} pagination={{ showQuickJumper: true }}></Table>
+            </div>
+        </div>
     </div>
 }
 
