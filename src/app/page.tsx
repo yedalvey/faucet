@@ -4,16 +4,12 @@ import { CustomButton } from 'src/components/CustomConnectButton'
 // import { BlockNumber } from '../components/BlockNumber'
 import { ConnectKitButton } from '../components/ConnectKitButton'
 import { NetworkSwitcher } from '../components/NetworkSwitcher'
-import { UnConnected } from 'src/components/UnConnected'
 import ConnectedArea from './main'
 import { Connected } from 'src/components/Connected'
-import Head from 'next/head';
 
 export function Page() {
   return (
     <div>
-      <Head><link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <Connected flag={false}>
         <div className="h-screen w-screen flex items-center justify-center">
           <div className='text-white text-center font-semibold text-7xl'>
@@ -30,8 +26,6 @@ export function Page() {
         {/* <Account /> */}
         <ConnectedArea />
       </Connected>
-
-
     </div>
   )
 }
