@@ -10,7 +10,7 @@ const theme: ThemeConfig = {
   "components": {
     "Table": {
       "colorBgContainer": "#121418",
-      // "colorText": "white",
+      "colorText": "white",
       // "colorTextHeading": "white"
       "fontSize": 14
     },

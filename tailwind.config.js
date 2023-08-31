@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         'custom-dark': '#0D0F12',
+        'color_10': '#121418'
       }
     }
   },

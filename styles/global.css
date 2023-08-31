@@ -6,6 +6,11 @@
   background: linear-gradient(136deg, #fff0d3 0%, #d5953b 100%);
   color: #0d0f12;
 }
+
+.dei-button {
+  border: none;
+}
+/* starts with antd */
 .ant-pagination .ant-pagination-options-quick-jumper input {
   color: black;
 }
@@ -33,3 +38,9 @@ th {
 .ant-table-container table > thead > tr:first-child th:last-child {
   border-right: none;
 }
+
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  justify-content: center;
+}
+
+/* ends with antd */

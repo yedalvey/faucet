@@ -39,6 +39,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         }}
         customTheme={{
           "--ck-body-background": "#121418",
+          "--ck-connectbutton-background": "#121418"
         }}
 
       >{mounted && children}</ConnectKitProvider>
