@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "serve ./out"
   },
   "dependencies": {
     "@walletconnect/modal": "^2.6.1",
