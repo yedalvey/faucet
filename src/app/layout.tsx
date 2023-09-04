@@ -4,7 +4,7 @@ import { ConfigProvider } from 'antd';
 import theme from 'theme/themeConfig';
 
 export const metadata = {
-  title: 'BLEX | Super Referral',
+  title: 'Super Referral',
 }
 
 export default function RootLayout({

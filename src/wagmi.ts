@@ -13,7 +13,8 @@ export const config = createConfig(
     chains,
     autoConnect: true,
     appName: 'Super Referral',
-    walletConnectProjectId: null,
+    // walletConnectProjectId: null,
+    walletConnectProjectId: "8fceb548bea9a92efcb7c0230d70011b",
     connectors: [
       new MetaMaskConnector({ chains }),
       new CoinbaseWalletConnector({
