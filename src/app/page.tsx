@@ -1,18 +1,12 @@
-'use client'
 import { CustomButton } from 'src/components/CustomConnectButton'
-// import { Account } from '../components/Account'
-// import { Balance } from '../components/Balance'
-// import { BlockNumber } from '../components/BlockNumber'
-import { ConnectKitButton } from '../components/ConnectKitButton'
-import { NetworkSwitcher } from '../components/NetworkSwitcher'
 import ConnectedArea from './main'
 import { Connected } from 'src/components/Connected'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 
-export function Page() {
+const Page = () =>{
 
-  const router = useRouter()
+  // const router = useRouter()
 
   // router.push('/home', { scroll: false })
   return (
